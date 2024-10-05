@@ -1,0 +1,49 @@
+﻿<Window x:Class="Skola_halamka_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Škola" Height="450" Width="400">
+
+    
+    <Grid>
+        <TabControl >
+            <TabItem Header="Zaměstnanci" HorizontalAlignment="Center">
+                <TabControl>
+                    <TabItem Header="Učitelé">
+                        
+                        <StackPanel>
+                            
+                            <Button Content="Přidat" Click="AddTeacher_Click" />
+                            <Button Content="Smazat" Click="DeleteTeacher_Click" />
+                            <ListView x:Name="TeachersList" />
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Údržbáři">
+                        <StackPanel>
+                            
+                            <Button Content="Přidat" Click="AddMaintenance_Click" />
+                            
+                           <Button Content="Smazat" Click="DeleteMaintenance_Click" />
+                            <ListView x:Name="MaintenanceList" />
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Podpora">
+                        <StackPanel>
+                            
+                            <Button Content="Přidat" Click="AddSupport_Click" />
+                            <Button Content="Smazat" Click="DeleteSupport_Click" />
+                            <ListView x:Name="SupportList" />
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <TabItem Header="Studenti">
+                <StackPanel>
+                    
+                    <Button Content="Přidat" Click="AddStudent_Click"/>
+                    <Button Content="Smazat" Click="DeleteStudent_Click" />
+                    <ListView x:Name="StudentsList" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
